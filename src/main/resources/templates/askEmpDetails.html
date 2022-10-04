@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee card</title>
+</head>
+<body >
+
+<form th:action="@{/}" method="get">
+    <input type="submit" class="Buttons" value="back"/>
+</form>
+
+<form th:action="@{/employee/viewEmpDetails}" th:method="POST" th:object="${employee}">
+    <h1> Enter Your information</h1>
+    <br>
+
+    <input th:field="*{name}" type="text" name="username" placeholder="EmployeeName"/>
+    <br>
+
+    <input th:field="*{surname}" type="text" name="surname" placeholder="EmployeSurname"/>
+    <br>
+
+    <input th:field="*{salary}" type="text"   name="salary" placeholder="EmployeSalary"/>
+    <br>
+
+    <input th:field="*{department}" type="text"   name="department" placeholder="EmployeeDepartment"/>
+    <br>
+
+    <input type="submit" class="Buttons" value="Зарегистрироваться"/>
+</form>
+
+</body>
+
+</html>
